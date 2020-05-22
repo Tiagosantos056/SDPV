@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    <TextView
+        android:id="@+id/txtEmailCadastradoDegustador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email@example.com"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_toEndOf="@id/txtEmail"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/txtTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone:"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtTelefoneCadastradoDegustador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0000-0000"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_toEndOf="@id/txtTelefone"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/txtEmailCadastradoDegustador"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtCPF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CPF:"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/txtTelefone"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtCPFDegustadorCadastrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000.000.000-00"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/txtTelefoneCadastradoDegustador"
+        android:layout_toEndOf="@id/txtCPF"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CadastroAdministrador">
+
+    <include layout="@layout/toolbar_app"
+        android:id="@+id/toolbarCadastroAdmin"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/toolbarCadastroAdmin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey100">
+
+            <TextView
+                android:id="@+id/txtInfoPessoaisCadastroAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_pessoais"
+                style="@style/TextAboveRoundView"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlConteudoCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_below="@id/txtInfoPessoaisCadastroAdmin"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/round_view">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNomeAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtNomeAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:hint="@string/nome">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmailAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilNomeAdmin"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtEmailAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/email">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTelefoneAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilEmailAdmin"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTelefoneAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone|text"
+                        android:hint="@string/telefone">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCPF_CNPJAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilTelefoneAdmin"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCPF_CNPJAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:hint="@string/cpf_cnpj">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSenhaAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilCPF_CNPJAdmin"
+                    android:layout_marginTop="32dp"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtSenhaAdmin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"
+                        android:hint="@string/senha">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCadastrarCadastroAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastrar"
+                    style="@style/ButtonStyle"
+                    android:layout_below="@id/tilSenhaAdmin"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:enabled="false"/>
+
+                <Button
+                    android:id="@+id/btnCancelarCadastroAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/ButtonText"
+                    android:text="@string/cancelar"
+                    android:layout_below="@id/tilSenhaAdmin"
+                    android:layout_marginTop="16sp"
+                    android:layout_toStartOf="@id/btnCadastrarCadastroAdmin"
+                    android:layout_marginEnd="8dp" />
+
+                <ProgressBar
+                    android:id="@+id/pgrCadastroAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

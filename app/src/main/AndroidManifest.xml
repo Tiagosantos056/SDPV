@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.sdpv">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_sdpv"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_sdpv_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.RelatorioGraficoDegustador"></activity>
+        <activity android:name=".activity.VisualizarNotaDegustacao" />
+        <activity android:name=".activity.ListaVinhosDegustadosRelatorio" />
+        <activity android:name=".activity.ListaDegustadoresRelatorio" />
+        <activity android:name=".activity.VisualizarDegustador" />
+        <activity android:name=".activity.RelatorioDegustador" />
+        <activity android:name=".activity.TelaPrincipalAdministrador" />
+        <activity android:name=".activity.SplashScreenFirstTime" />
+        <activity android:name=".activity.CadastroAdministrador">
+        </activity>
+        <activity android:name=".activity.ListaVinhosDegustador" />
+        <activity android:name=".activity.NotaDegustacao" />
+        <activity android:name=".activity.ListaDegustadores" />
+        <activity android:name=".activity.RecuperarSenha" />
+        <activity android:name=".activity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.CadastroDegustador" />
+        <activity android:name=".activity.DegustadorTelaPrincipal" />
+        <activity android:name=".activity.Login" />
+    </application>
+
+</manifest>

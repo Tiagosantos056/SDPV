@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey100"
+    tools:context=".activity.RecuperarSenha">
+
+    <include layout="@layout/toolbar_app"
+        android:id="@+id/toolbarRecuperarSenha"/>
+
+    <ImageView
+        android:id="@+id/imgSDPVLogoRecuperarSenha"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/sdpv_logo_redm"
+        android:layout_below="@id/toolbarRecuperarSenha"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_view"
+        android:padding="16dp"
+        android:layout_below="@id/imgSDPVLogoRecuperarSenha">
+
+        <TextView
+            android:id="@+id/txtMsgRedefinirSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digite seu email abaixo, e em seguida, encaminharemos um link para que você possa redefinir a senha da sua conta."
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmailRecuperacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMsgRedefinirSenha"
+            android:layout_marginTop="16dp"
+            android:hint="@string/email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmailRecuperacao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/tilEmailRecuperacao"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_alignParentEnd="true"
+            android:enabled="false"/>
+
+        <Button
+            android:id="@+id/btnCancelarRecuperacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"
+            style="@style/ButtonText"
+            android:layout_below="@id/tilEmailRecuperacao"
+            android:layout_marginTop="16dp"
+            android:layout_toStartOf="@id/btnEnviar"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

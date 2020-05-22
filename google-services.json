@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "464097496873",
+    "firebase_url": "https://sdpv-27c2b.firebaseio.com",
+    "project_id": "sdpv-27c2b",
+    "storage_bucket": "sdpv-27c2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464097496873:android:2107391876041c0d",
+        "android_client_info": {
+          "package_name": "br.com.sdpv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464097496873-pqr11jgak59itjij5a042q8epo71jn2t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.sdpv",
+            "certificate_hash": "2ecd50018a3f84deb774eab880370d263c07ec82"
+          }
+        },
+        {
+          "client_id": "464097496873-l2p3c3m93covk4j6tqg57peejkj5m82k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhqFxpIfWzDfW9iZbLVKpcwXY-coAFL5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464097496873-l2p3c3m93covk4j6tqg57peejkj5m82k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

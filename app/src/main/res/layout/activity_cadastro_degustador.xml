@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CadastroDegustador">
+
+    <include layout="@layout/toolbar_app"
+        android:id="@+id/toolbarDegustadorCadastro"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarDegustadorCadastro">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey100">
+
+            <TextView
+                android:id="@+id/txtCadastroDegustador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_pessoais"
+                style="@style/TextAboveRoundView"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlConteudoCadastro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_below="@id/txtCadastroDegustador"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/round_view">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNomeDegustador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtNomeDegustador"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:hint="@string/nome">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmailDegustador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilNomeDegustador"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtEmailDegustador"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/email">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilTelefoneDegustador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilEmailDegustador"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtTelefoneDegustador"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone|text"
+                        android:hint="@string/telefone">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCPFDegustador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilTelefoneDegustador"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCPFDegustador"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:hint="@string/cpf">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilSenhaDegustador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tilCPFDegustador"
+                    android:layout_marginTop="32dp"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtSenhaDegustador"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textPassword"
+                        android:hint="@string/senha">
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCadastrarCadastro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cadastrar"
+                    style="@style/ButtonStyle"
+                    android:layout_below="@id/tilSenhaDegustador"
+                    android:layout_marginTop="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:enabled="false"/>
+
+                <Button
+                    android:id="@+id/btnCancelarCadastro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/ButtonText"
+                    android:text="@string/cancelar"
+                    android:layout_below="@id/tilSenhaDegustador"
+                    android:layout_marginTop="16sp"
+                    android:layout_toStartOf="@id/btnCadastrarCadastro"
+                    android:layout_marginEnd="8dp" />
+
+                <View
+                    android:id="@+id/dividerCadastro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/divider"
+                    android:layout_below="@id/btnCadastrarCadastro"
+                    android:layout_marginTop="16dp">
+                </View>
+
+                <TextView
+                    android:id="@+id/txtPossuiConta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ja_possui_uma_conta"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_below="@id/dividerCadastro"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txtFazerLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fazer_login"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/primaryColor"
+                    android:layout_below="@id/txtPossuiConta"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"/>
+
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/pgrCadastroDegustador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

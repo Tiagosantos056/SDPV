@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey100"
+    tools:context=".activity.Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey100">
+
+        <ImageView
+            android:id="@+id/imgSDPVLogoLogin"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/sdpv_logo_redm"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlConteudoLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@drawable/round_view"
+            android:layout_below="@id/imgSDPVLogoLogin"
+            android:layout_marginBottom="16dp">
+
+            <ProgressBar
+                android:id="@+id/pgrLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/txtBemVindo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bem_vindo"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtMsgFazerLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/faca_o_login_para_continuar"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="@color/grey700"
+                android:layout_below="@id/txtBemVindo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtMsgFazerLogin"
+                android:layout_marginTop="32dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/e_mail"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSenhaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tilEmailLogin"
+                android:layout_marginTop="32dp"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtSenhaLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="@string/senha"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/rGpTipoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/tilSenhaLogin"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/rBtnDegustador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Degustador" />
+
+                <RadioButton
+                    android:id="@+id/rBtnAdministrador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administrador" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                style="@style/ButtonStyle"
+                android:layout_below="@+id/rGpTipoUsuario"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                android:enabled="false"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider"
+                android:layout_below="@id/btnLogin"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtEsqueceuSenha"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider"
+                android:layout_alignStart="@id/divider_vertical"
+                android:layout_alignEnd="@+id/divider_vertical"
+                android:layout_alignParentStart="true"
+                android:textAlignment="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="Esqueceu a senha?" />
+
+            <TextView
+                android:id="@+id/txtRecuperarSenha"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEsqueceuSenha"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toStartOf="@+id/divider_vertical"
+                android:text="Recuperar Senha"
+                android:textAlignment="center"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider_vertical"
+                android:layout_width="0.5dp"
+                android:layout_height="50dp"
+                android:background="@drawable/divider_vertical"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/txtDegustadorNovo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Degustador Novo?"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_below="@id/divider"
+                android:layout_alignStart="@id/divider_vertical"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtCadastroDegustadorLogin"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDegustadorNovo"
+                android:layout_alignStart="@id/divider_vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="4dp"
+                android:text="Cad. de Degustador"
+                android:textAlignment="center"
+                android:textColor="@color/primaryColor"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

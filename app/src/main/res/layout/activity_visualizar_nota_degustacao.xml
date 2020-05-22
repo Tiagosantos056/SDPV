@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey100"
+    android:fillViewport="true"
+    tools:context=".activity.VisualizarNotaDegustacao">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbarVisualizarNotaDegustacao"
+            layout="@layout/toolbar_app"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtInfoNotaDegustacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Info. da Nota de Degustação"
+            style="@style/TextAboveRoundView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarVisualizarNotaDegustacao" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/round_view"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInfoNotaDegustacao"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/imgWineBottleVisualizarNota"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/wine_bottle_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtInfoGarrafaVisualizarNota"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Info. da Garrafa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgWineBottleVisualizarNota" />
+
+            <TextView
+                android:id="@+id/txtNomeVinicolaVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Vinícola:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInfoGarrafaVisualizarNota" />
+
+            <TextView
+                android:id="@+id/txtNomeVinicolaVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtInfoGarrafaVisualizarNota"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtNomeVinicolaVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtNomeVinhoVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Vinho: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNomeVinicolaVisualizar" />
+
+            <TextView
+                android:id="@+id/txtNomeVinhoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtNomeVinicolaVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtNomeVinhoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtTipoVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tipo: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNomeVinhoVisualizar" />
+
+            <TextView
+                android:id="@+id/txtTipoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtNomeVinhoVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtTipoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtPaisRegiaoVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="País / Região: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTipoVisualizar" />
+
+            <TextView
+                android:id="@+id/txtPaisRegiaoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtTipoVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtPaisRegiaoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtUvaVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Uva(s): "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPaisRegiaoVisualizar" />
+
+            <TextView
+                android:id="@+id/txtUvaVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtPaisRegiaoVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtUvaVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtVolAlcoolicoVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Vol. Alcoólico: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtUvaVisualizar" />
+
+            <TextView
+                android:id="@+id/txtVolAlcoolicoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtUvaVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtVolAlcoolicoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"/>
+
+            <View
+                android:id="@+id/dividerInfoGarrafaVisualizar2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtVolAlcoolicoVisualizar" />
+
+            <View
+                android:id="@+id/dividerInfoGarrafaVisualizar3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/divider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAspectoGeralVisualizar" />
+
+            <ImageView
+                android:id="@+id/imgEyeIconNotaVisualizar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/eye_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerInfoGarrafaVisualizar2" />
+
+            <TextView
+                android:id="@+id/txtAnaliseVisualVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Análise Visual"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgEyeIconNotaVisualizar" />
+
+            <TextView
+                android:id="@+id/txtCorVinhoVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cor:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAnaliseVisualVisualizar" />
+
+            <TextView
+                android:id="@+id/txtCorVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAnaliseVisualVisualizar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtCorVinhoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtViscosidadeVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Viscosidade:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtVarTonalidadeVisualizar" />
+
+            <TextView
+                android:id="@+id/txtViscosidadeVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtVarTonalidadeVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtViscosidadeVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtAspectoGeralVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Aspecto Geral:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViscosidadeVisualizar" />
+
+            <TextView
+                android:id="@+id/txtAspectoGeralVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtViscosidadeVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtAspectoGeralVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtVarTonalidadeVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Var. Tonalidade:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCorVinhoVisualizar" />
+
+            <TextView
+                android:id="@+id/txtVarTonalidadeVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtCorVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtVarTonalidadeVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <ImageView
+                android:id="@+id/imgNoseIconVisualizarNota"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/nose_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerInfoGarrafaVisualizar3" />
+
+            <TextView
+                android:id="@+id/txtAnaliseOlfativaVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Análise Olfativa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNoseIconVisualizarNota" />
+
+            <TextView
+                android:id="@+id/txtCondicaoVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Condição:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAnaliseOlfativaVisualizar" />
+
+            <TextView
+                android:id="@+id/txtCondicaoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAnaliseOlfativaVisualizar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtCondicaoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtItensidadeVisualizar"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Itensidade:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCondicaoVisualizar" />
+
+            <TextView
+                android:id="@+id/txtItensidadeVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtCondicaoVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtItensidadeVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtCaracteristcasOlfativasVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Características:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtItensidadeVisualizar"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtCaracteristicasVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtItensidadeVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtCaracteristcasOlfativasVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="5"
+                android:ellipsize="end"/>
+
+            <View
+                android:id="@+id/dividerAboveAnalisePaladar"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/divider"
+                app:layout_constraintTop_toBottomOf="@id/txtCaracteristcasOlfativasVisualizar"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/imgTastingIconVisualizar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/tasting_icon"
+                app:layout_constraintTop_toBottomOf="@id/dividerAboveAnalisePaladar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtAnalisePaladarVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análise do Paladar"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintTop_toBottomOf="@id/imgTastingIconVisualizar"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtDocuraVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doçura:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAnalisePaladarVisualizar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtDocuraVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAnalisePaladarVisualizar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtDocuraVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtCorpoVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corpo:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtDocuraVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtCorpoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtDocuraVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtCorpoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtAcidezVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acidez:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtCorpoVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtAcidezVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtCorpoVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtAcidezVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtAromasRetroVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aromas Retronasais:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtTaninosVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtAromaRetroVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtTaninosVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtAromasRetroVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="5"
+                android:textAlignment="textStart"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtTaninosVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taninos"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAcidezVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtTaninosVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAcidezVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtTaninosVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtFinalVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAromasRetroVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtFinalVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAromaRetroVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtFinalVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <View
+                android:id="@+id/dividerAboveAnaliseGeral"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@drawable/divider"
+                app:layout_constraintTop_toBottomOf="@id/txtFinalVisualizar"
+                android:layout_marginTop="16dp"/>
+
+            <ImageView
+                android:id="@+id/imgInfoAnaliseGeralVisualizar"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_info_outline"
+                app:layout_constraintTop_toBottomOf="@id/dividerAboveAnaliseGeral"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtAnaliseGeralVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análise Geral"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintTop_toBottomOf="@id/imgInfoAnaliseGeralVisualizar"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtQualidadeGeralVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qualidade Geral:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAnaliseGeralVisualizar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtQualidadeGeralVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtAnaliseGeralVisualizar"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtQualidadeGeralVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtComentariosGeralVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentários Gerais:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtQualidadeGeralVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtComentariosGeralVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtQualidadeGeralVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtComentariosGeralVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtPontuacaoVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pontuação:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtComentariosGeralVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtPontuacaoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtComentariosGeralVisualizarTexto"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/txtPontuacaoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txtLocalDegustacaoVisualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local da Degustacao:"
+                android:visibility="gone"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtPontuacaoVisualizar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/txtLocalDegustacaoVisualizarTexto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                app:layout_constraintTop_toBottomOf="@id/txtPontuacaoVisualizarTexto"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@id/txtLocalDegustacaoVisualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

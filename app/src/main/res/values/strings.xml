@@ -1,0 +1,196 @@
+<resources>
+    <string name="app_name">SDPV</string>
+
+    <!-- Strings relacionadas aos títulos das Toolbars-->
+    <string name="toolbar_tela_principal_degustador">Tela Principal</string>
+    <string name="toolbar_cadastro_degustador">Cadastro de Degustador</string>
+    <string name="toolbar_cadastro_admin">Cadastro de Administrador</string>
+    <string name="toolbar_lista_degustadores">Degustadores Cadastrados</string>
+    <string name="toolbar_visualizar_degustador">Visualizar Degustador</string>
+    <string name="toolbar_relatorio_degustador">Relatório do Degustador</string>
+    <string name="toolbar_relatorio_grafico">Relatório Gráfico</string>
+    <string name="toolbar_recuperar_senha">Recuperar Senha</string>
+    <string name="toolbar_nota_degustacao">Nota de Degustacão</string>
+    <string name="toolbar_visualizar_nota">Visualizar Nota</string>
+    <string name="toolbar_lista_vinhos">Vinhos Degustados</string>
+
+    <!-- String relacionada a SplashScreen Inicial -->
+    <string name="splash_welcome_msg">Obrigado por ter nos escolhido! Com esta aplicação você terá
+        acesso a notas de degustação, relatórios gerenciais e mais!
+        Primeiro, vamos começar cadastrando um
+        administrador.</string>
+
+    <!-- Strings Firebase -->
+    <string name="db_degustador">degustador</string>
+    <string name="db_admin">administrador</string>
+    <string name="db_vinho">vinho</string>
+    <string name="db_nota_degustacao">notaDegustacao</string>
+
+    <!-- Strings relacionadas aos Layouts-->
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="telefone">Telefone</string>
+    <string name="login">Login</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="senha">Senha</string>
+    <string name="esqueceu_a_senha">Esqueceu a senha?</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="ou">ou</string>
+    <string name="faca_o_login_para_continuar">Faça o login para continuar.</string>
+    <string name="bem_vindo">Bem-Vindo(a),</string>
+    <string name="cadastro_de_degustador">Cadastro de Degustador</string>
+    <string name="preencha_os_campos_abaixo_para_se_cadastrar">Preencha os campos abaixo para se cadastrar.</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_uma_senha">Digite uma senha</string>
+    <string name="digite_seu_telefone">Digite seu telefone</string>
+    <string name="cpf">CPF (Apenas Números)</string>
+    <string name="cpf_cnpj">CPF/CNPJ (Apenas Números)</string>
+    <string name="digite_seu_e_mail">Digite seu E-Mail</string>
+    <string name="ja_possui_uma_conta">Já possui uma conta?</string>
+    <string name="fazer_login">Fazer login</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="info_pessoais">Info. Pessoais</string>
+    <string name="perfil">Perfil</string>
+    <string name="opcoes">Opções</string>
+    <string name="nota_de_degustacao">Nota de Degustação</string>
+    <string name="registre_suas_impressoes_de_um_vinho">Registre suas impressões de um vinho.</string>
+    <string name="vinhos_degustados">Vinhos Degustados</string>
+    <string name="visualize_as_notas_dos_vinhos_degustados">Visualize as notas dos vinhos degustados.</string>
+    <string name="dados_cadastrais">Dados Cadastrais</string>
+    <string name="altere_seus_dados">Altere seus dados.</string>
+    <string name="informacoes_do_rotulo">Informações do Rótulo</string>
+    <string name="limpido_brilhante">Límpido / Brilhante</string>
+    <string name="nebuloso_sujo">Nebuloso / Sujo</string>
+    <string name="nome_relatorio">Relatório do Degustador: </string>
+
+    <!-- Strings relacionadas aos Toasts-->
+    <string name="cadastro_realizado_sucesso">Cadastro realizado com sucesso!</string>
+    <string name="erro_ao_cadastrar">Erro ao realizar cadastro!</string>
+    <string name="login_sucesso">Login realizado com sucesso!</string>
+    <string name="falha_autenticacao">Falha na autenticação!</string>
+    <string name="reautenticacao_sucesso">Bem-Vindo de volta ao SDPV!</string>
+    <string name="usuario_nao_existente">O Usuário não está cadastrado!</string>
+    <string name="logout_sucesso">Logout realizado com sucesso!</string>
+    <string name="dados_alterados_sucesso_toast">Dado(s) alterado(s) com sucesso!</string>
+    <string name="recuperar_senha_caixa_entrada">Por favor, cheque a Caixa de Entrada do seu e-mail.</string>
+    <string name="usuario_deletado_sucesso">Usuário excluido com sucesso!</string>
+    <string name="usuário_deletado_erro">Erro ao deletar usuário!</string>
+    <string name="nota_add_sucesso">Nota adcionada com sucesso!</string>
+    <string name="nota_add_erro">Erro ao salvar a nota de degustação!</string>
+    <string name="nota_deletada_sucesso">Nota de degustação deletada com sucesso!</string>
+    <string name="erro_deletar_nota">Erro ao deletar a nota de degustação!</string>
+    <string name="foto_perfil_add_sucesso">Foto de Perfil adcionada com sucesso!</string>
+    <string name="email_atualizado_sucesso">Email de acesso atualizado com sucesso!</string>
+    <string name="senha_atualizada_sucesso">Senha de acesso atualizada com sucesso!</string>
+    <string name="telefone_atualizado_sucesso">Número de Telefone alterado com sucesso!</string>
+    <string name="email_atualizado_erro">Erro ao alterar o email de acesso!</string>
+    <string name="senha_atualizada_erro">Erro ao alterar a senha de acesso!</string>
+    <string name="telefone_atualizado_erro">Erro ao alterar o número de telefone!</string>
+
+    <!-- Strings relacionados aos AlertDialogs-->
+    <string name="sair_msg">Deseja sair?</string>
+    <string name="sair_app">Deseja sair da aplicação?</string>
+    <string name="sair_title">Sair</string>
+    <string name="voltar_acao">Voltar</string>
+    <string name="confirmar_acao">Confirmar</string>
+    <string name="salvar_acao">Salvar</string>
+    <string name="cancelar_title">Cancelar</string>
+    <string name="cancelar_cadastro">Deseja cancelar o cadastro?</string>
+    <string name="confirmar_nota_degustacao">Salvar a nota de degustação</string>
+    <string name="confirmar_inclusão_nota_msg">Deseja salvar a nota de degustação? Após salvar a nota, não é possível alterá-la.</string>
+    <string name="confirmar_exclusao_nota">Deseja excluir a nota? Esta ação não poderá ser desfeita.</string>
+    <string name="deletar_conta_title">Deletar Conta</string>
+    <string name="deletar_conta_msg">Deseja deletar a sua conta? Esta ação não poderá ser desfeita.</string>
+    <string name="title_excluir_nota">Excluir Nota de Degustação</string>
+    <string name="cancelar_recuperacao">Deseja cancelar a recuperação de senha?</string>
+    <string name="cancelar_nota">Deseja cancelar o preenchimento da nota de degustação?</string>
+    <string name="alterar_dados">Alterar Dados Cadastrais</string>
+    <string name="alterar_email">Alterar Email</string>
+    <string name="alterar_senha">Alterar Senha</string>
+    <string name="alterar_telefone">Alterar Telefone</string>
+    <string name="visualizar_dados_cadastrais">Visualizar Dados Cadastrais</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="dados_alterados_sucesso">Dados alterados com sucesso!</string>
+    <string name="cadastrar_dados_degustador">Cadastrar Dados Pessoais</string>
+    <string name="alterar_acao">Alterar</string>
+    <string name="opcoes_dialog_title">Opções</string>
+    <string name="ok_acao">Ok</string>
+
+    <!-- Strings Relacionadas aos Menus-->
+    <string name="info_garrafa">Info. Garrafa</string>
+    <string name="visual">Visual</string>
+    <string name="olfato">Olfato</string>
+    <string name="paladar">Paladar</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="sair">Sair</string>
+
+    <!-- Array de Strings para os Spinners -->
+    <string-array name="array_tonalidade">
+        <item></item>
+        <item>Baixa</item>
+        <item>Média</item>
+        <item>Alta</item>
+    </string-array>
+
+    <string-array name="array_viscosidade">
+        <item></item>
+        <item>Baixa</item>
+        <item>Média</item>
+        <item>Alta</item>
+    </string-array>
+
+    <string-array name="array_itensidade_aromatica">
+        <item></item>
+        <item>Sutil</item>
+        <item>Média</item>
+        <item>Pronunciada</item>
+    </string-array>
+
+    <string-array name="array_docura">
+        <item></item>
+        <item>Seco</item>
+        <item>Meio-Seco</item>
+        <item>Doce</item>
+    </string-array>
+
+    <string-array name="array_corpo">
+        <item></item>
+        <item>Leve</item>
+        <item>Médio</item>
+        <item>Encorpado</item>
+    </string-array>
+
+    <string-array name="array_acidez">
+        <item></item>
+        <item>Baixa</item>
+        <item>Média</item>
+        <item>Alta</item>
+    </string-array>
+
+    <string-array name="array_taninos">
+        <item></item>
+        <item>Nenhum</item>
+        <item>Baixos</item>
+        <item>Médios</item>
+        <item>Altos</item>
+    </string-array>
+
+    <string-array name="array_final_vinho">
+        <item></item>
+        <item>Curto</item>
+        <item>Médio</item>
+        <item>Longo</item>
+    </string-array>
+
+    <string-array name="array_qualidade_geral">
+        <item></item>
+        <item>Defeituoso</item>
+        <item>Pobre</item>
+        <item>Aceitável</item>
+        <item>Bom</item>
+        <item>Muito Bom</item>
+        <item>Excepcional</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtNovoEmailAdministrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    <TextView
+        android:id="@+id/txtNovoTelefoneAdministrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefone"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/tilNovoEmailAdministrador"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtNovaSenhaAdministrador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/tilNovoTelefoneAdministrador"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNovoEmailAdministrador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNovoEmailAdministrador">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNovoEmailAdministrador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNovoTelefoneAdministrador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNovoTelefoneAdministrador">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNovoTelefoneAdministrdor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="phone|number">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNovaSenhaAdministrador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/txtNovaSenhaAdministrador">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNovaSenhaAdministrador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

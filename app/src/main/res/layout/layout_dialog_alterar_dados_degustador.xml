@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtNovoEmailDegustador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    <TextView
+        android:id="@+id/txtNovoTelefoneDegustador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefone"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/tilNovoEmailDegustador"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/txtNovaSenhaDegustador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/senha"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_below="@id/tilNovoTelefoneDegustador"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNovoEmailDegustador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNovoEmailDegustador">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNovoEmailDegustador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNovoTelefoneDegustador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtNovoTelefoneDegustador">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNovoTelefoneDegustador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="phone|number">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNovaSenhaDegustador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@id/txtNovaSenhaDegustador">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNovaSenhaDegustador"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword">
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NotaDegustacao">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlConteudoInfoGarrafa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round_view"
+            android:layout_below="@id/toolbarNotaDegustacaoSingleScreen"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/imgWineBottleInfoGarrafa"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/wine_bottle_icon"
+                android:layout_toEndOf="@id/dividerHeadlineInfoGarrafa"
+                android:layout_marginStart="8dp"/>
+
+            <View
+                android:id="@+id/dividerHeadlineInfoGarrafa"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:background="@drawable/divider_vertical"
+                android:layout_toEndOf="@id/txtInfoRotuloHeadline"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/txtInfoRotuloHeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informações do Rótulo"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:layout_marginStart="52dp"
+                style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            <TextView
+                android:id="@+id/txtVinicola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vinícola"
+                android:layout_below="@id/txtInfoRotuloHeadline"
+                style="@style/TextSubtitle"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNomeVinicola"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/txtVinicola">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNomeVinicola"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtVinho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vinho"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/tilNomeVinicola"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNomeVinho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/txtVinho">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtNomeVinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtTipoVinho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo do Vinho"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/tilNomeVinho"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilTipoVinho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/txtTipoVinho">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtTipoVinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtPaisRegiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="País / Região de Origem"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/tilTipoVinho"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPaisRegiao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/txtPaisRegiao">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPaisRegiao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtUva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uva (Casta)"
+                style="@style/TextSubtitle"
+                android:layout_below="@+id/tilPaisRegiao"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/txtUva">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtUva"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtVolAlcoolico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volume Alcóolico (%)"
+                style="@style/TextSubtitle"
+                android:layout_below="@+id/tilUva"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilVolAlcoolico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/txtVolAlcoolico">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtVolAlcoolico"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text|number">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlConteudoAnaliseVisual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view"
+            android:padding="16dp"
+            android:layout_below="@id/rlConteudoInfoGarrafa"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtAnaliseVisualHeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análise Visual"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginStart="96dp"/>
+
+            <ImageView
+                android:id="@+id/imgEyeIconAnaliseVisual"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/eye_icon"
+                android:layout_toEndOf="@id/dividerAnaliseVisualHeadline"
+                android:layout_marginStart="8dp"/>
+
+            <View
+                android:id="@+id/dividerAnaliseVisualHeadline"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:background="@drawable/divider_vertical"
+                android:layout_toEndOf="@id/txtAnaliseVisualHeadline"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/txtCor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cor"
+                android:layout_below="@id/txtAnaliseVisualHeadline"
+                style="@style/TextSubtitle"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCorVinho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCor"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCorVinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtVarTonlidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Variação de Tonalidade"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/tilCorVinho"
+                android:layout_marginTop="32dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlSpnVarTonalidade"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtVarTonlidade"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnVarTonalidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtViscosidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Viscosidade"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlSpnVarTonalidade"
+                android:layout_marginTop="32dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlSpnViscosidade"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtViscosidade"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnViscosidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtAspectoGeralVinho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aspecto Geral do Vinho"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlSpnViscosidade"
+                android:layout_marginTop="32dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAspectoVinho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAspectoGeralVinho"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAspectoVinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlConteudoAnaliseOlfativa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view"
+            android:layout_below="@id/rlConteudoAnaliseVisual"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtAnaliseOlfativaHeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análise Olfativa"
+                android:paddingEnd="4dp"
+                android:layout_marginStart="92dp"
+                style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            <ImageView
+                android:id="@+id/imgNoseIconHeadline"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/nose_icon"
+                android:layout_toEndOf="@id/dividerHeadlineAnaliseOlfativa"
+                android:layout_marginStart="8dp"/>
+
+            <View
+                android:id="@+id/dividerHeadlineAnaliseOlfativa"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:background="@drawable/divider_vertical"
+                android:layout_toEndOf="@id/txtAnaliseOlfativaHeadline"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/txtCondicaoAromatica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condição Aromática"
+                android:layout_below="@id/txtAnaliseOlfativaHeadline"
+                style="@style/TextSubtitle"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCondicaoAromatica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCondicaoAromatica"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCondicaoAromatica"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtIntensidadeAromatica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Itensidade Aromática"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/tilCondicaoAromatica"
+                android:layout_marginTop="32dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSpnItensidadeAromatica"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtIntensidadeAromatica"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnItensidadeAromatica"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtAromasNasais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aromas Nasais"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlSpnItensidadeAromatica"
+                android:layout_marginTop="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAromasNasais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAromasNasais"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAromasNasais"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlConteudoAnalisePaladar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view"
+            android:padding="16dp"
+            android:layout_below="@id/rlConteudoAnaliseOlfativa"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtAnalisePaladarHeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Análise do Paladar"
+                android:layout_marginStart="80dp"
+                style="@style/TextAppearance.MaterialComponents.Headline6"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/tasting_icon"
+                android:layout_toEndOf="@id/dividerHeadlineAnalisePaladar"
+                android:layout_marginStart="8dp"/>
+
+            <View
+                android:id="@+id/dividerHeadlineAnalisePaladar"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:background="@drawable/divider_vertical"
+                android:layout_toEndOf="@id/txtAnalisePaladarHeadline"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/txtDocura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doçura"
+                android:layout_below="@id/txtAnalisePaladarHeadline"
+                style="@style/TextSubtitle"
+                android:layout_marginTop="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSpnDocura"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtDocura"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnDocura"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtCorpo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Corpo"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlSpnDocura"
+                android:layout_marginTop="32dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSpnCorpo"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtCorpo"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnCorpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtAcidez"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acidez"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlSpnCorpo"
+                android:layout_marginTop="32dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSpnAcidez"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtAcidez"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnAcidez"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlTaninos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlSpnAcidez"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:id="@+id/txtTaninos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taninos"
+                    style="@style/TextSubtitle"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlSpnTaninos"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/spinner_background"
+                    android:layout_below="@id/txtTaninos"
+                    android:layout_marginTop="16dp">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spnTaninos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtAromasRetronasais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aromas Retronasais"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlTaninos"
+                android:layout_marginTop="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAromasRetronasais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtAromasRetronasais"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAromasRetronasais"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtFinalVinho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Final do Vinho"
+                style="@style/TextSubtitle"
+                android:layout_below="@+id/tilAromasRetronasais"
+                android:layout_marginTop="32dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSpnFinalVinho"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtFinalVinho"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnFinalVinho"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_view"
+            android:padding="16dp"
+            android:layout_below="@id/rlConteudoAnalisePaladar"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtDetalhesFinaisHeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detalhes Finais"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginStart="104dp"/>
+
+            <View
+                android:id="@+id/dividerHeadlineDetalhesFinais"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:background="@drawable/divider_vertical"
+                android:layout_toEndOf="@id/txtDetalhesFinaisHeadline"
+                android:layout_marginStart="8dp"/>
+
+            <ImageView
+                android:id="@+id/imgInfoHeadline"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_info_outline"
+                android:layout_toEndOf="@id/dividerHeadlineDetalhesFinais"
+                android:layout_marginStart="8dp"/>
+
+            <ProgressBar
+                android:id="@+id/pgrFinalizar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/txtQualidadeGeral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Qualidade Geral"
+                android:layout_below="@id/txtDetalhesFinaisHeadline"
+                style="@style/TextSubtitle"
+                android:layout_marginTop="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rlSpnQualidadeGeral"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/spinner_background"
+                android:layout_below="@id/txtQualidadeGeral"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnQualidadeGeral"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtComentariosGeral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentários Gerais"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/rlSpnQualidadeGeral"
+                android:layout_marginTop="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilComentariosGerais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtComentariosGeral"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtComentariosGerais"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtPontuacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pontuação"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/tilComentariosGerais"
+                android:layout_marginTop="32dp"/>
+
+            <NumberPicker
+                android:id="@+id/npPontuacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPontuacao"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/txtPontuacaoSelecionada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pontuação Selecionada:"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_below="@id/npPontuacao"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtPontuacaoNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_toRightOf="@id/txtPontuacaoSelecionada"
+                android:layout_below="@id/npPontuacao"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtNomeNota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local da Degustação"
+                style="@style/TextSubtitle"
+                android:layout_below="@id/txtPontuacaoSelecionada"
+                android:layout_marginTop="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilLocalDegustacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNomeNota"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtLocalDegustacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textMultiLine">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSalvarNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salvar"
+                style="@style/ButtonStyle"
+                android:layout_below="@id/tilLocalDegustacao"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+        </RelativeLayout>
+
+        <include layout="@layout/toolbar_app"
+            android:id="@+id/toolbarNotaDegustacaoSingleScreen"/>
+
+    </RelativeLayout>
+
+</ScrollView>
