@@ -18,6 +18,10 @@ do segundo do semestre de 2019 foi implementada grande parte das funcionalidades
 
 <p>As funcionalidades para gerenciamento dos degustadores e de membros não foram completamente implementadas.</p>
 
+### Idealizadores do Projeto
+<p><a href="https://github.com/mathsemilio">Matheus Emilio</a></p>
+<p><a href="https://github.com/Tiagosantos056">Tiago Ribeiro</a></p>
+
 ### Tecnologias utilizadas no Desenvolvimento
 Linguagem de Programação - **Java**
 
