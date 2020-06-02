@@ -5,8 +5,7 @@ Aplicação Android para armanzenamento de notas de degustação
 O SDPV - Sistema de Degustação Profissional de Vinho, tem como principal objetivo auxiliar degustadores a criar e 
 gerenciar suas notas de degustação. Tudo isso, aliado a facilidade e comodidade de uma aplicação mobile.
 
-<p>A aplicação também contém funcionalidades para Gerentes, onde estes podem gerenciar degustadores e
-sua atividade, além da criação de gráficos para melhor visualização. Outra funcionalidade voltada para gerenciamento, e
+<p>A aplicação também contém funcionalidades para gerentes e administradores de negócio, onde estes podem gerenciar degustadores e sua atividade, além da criação de gráficos para melhor visualização. Outra funcionalidade voltada para gerenciamento, e
 a funcionalidade para gerenciar membros. Estes membros, podem ser membros de um website da empresa (ex: Degustadores
 amadores que compartilham sua experiência sobre alguns vinhos), e por uma necessidade (ex: Regra de Negócio) 
 administradores precisam acessar informações sobre estes usuários.</p>
